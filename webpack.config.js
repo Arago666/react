@@ -76,6 +76,11 @@ module.exports = {
                 use: ["babel-loader"],
             },
             {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
+            {
                 test: /\.css$/,
                 exclude: [/node_modules/, /\.module\.css$/],
                 use: [
